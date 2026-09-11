@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloomhaus — Flowers, arranged with intention</title>
+<meta name="description" content="Bloomhaus is a modern online flower studio. Hand-tied, seasonal arrangements, delivered same day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ PETAL LAYER (decorative, non-interactive) ============ -->
+<div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo" aria-label="Bloomhaus home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M20 6C20 6 24 12 24 17C24 20.3137 22.2091 23 20 23C17.7909 23 16 20.3137 16 17C16 12 20 6 20 6Z" fill="currentColor"/>
+        <path d="M20 34C20 34 16 28 16 23C16 19.6863 17.7909 17 20 17C22.2091 17 24 19.6863 24 23C24 28 20 34 20 34Z" fill="currentColor" opacity="0.55"/>
+        <path d="M6 20C6 20 12 16 17 16C20.3137 16 23 17.7909 23 20C23 22.2091 20.3137 24 17 24C12 24 6 20 6 20Z" fill="currentColor" opacity="0.75"/>
+        <path d="M34 20C34 20 28 24 23 24C19.6863 24 17 22.2091 17 20C17 17.7909 19.6863 16 23 16C28 16 34 20 34 20Z" fill="currentColor" opacity="0.4"/>
+      </svg>
+      <span class="logo-word">Bloomhaus</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#process">Delivery</a>
+      <a href="#studio">Studio</a>
+      <a href="#footer">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Open cart" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-panel-inner">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+      <input type="text" placeholder="Search peonies, roses, seasonal…" aria-label="Search products">
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-kicker">Same-day flower delivery, hand-tied to order</p>
+      <h1 class="hero-title">Flowers,<br>arranged with<br><em>intention.</em></h1>
+      <p class="hero-sub">We work with a small circle of growers to cut, tie and deliver each arrangement the same day it's ordered — nothing sits in a warehouse.</p>
+      <div class="hero-cta-row">
+        <a href="#shop" class="btn btn-primary">Browse the collection</a>
+        <a href="#process" class="btn btn-ghost">How delivery works</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>4.9/5</dt><dd>from 12,400 orders</dd></div>
+        <div><dt>60+</dt><dd>partner growers</dd></div>
+        <div><dt>Same day</dt><dd>cut-off at 2pm</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg id="heroBouquet" viewBox="0 0 520 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="260" cy="560" rx="150" ry="24" fill="#20321F" opacity="0.08"/>
+        <path d="M255 380 C 250 440, 245 500, 250 580" stroke="#4B6B4A" stroke-width="6" stroke-linecap="round"/>
+        <path d="M300 380 C 305 440, 300 500, 292 580" stroke="#4B6B4A" stroke-width="6" stroke-linecap="round"/>
+        <path d="M220 390 C 215 450, 218 500, 214 570" stroke="#4B6B4A" stroke-width="5" stroke-linecap="round"/>
+        <g class="bloom bloom-1">
+          <circle cx="230" cy="200" r="62" fill="#EFC9CC"/>
+          <circle cx="205" cy="185" r="34" fill="#E9B7BB"/>
+          <circle cx="255" cy="180" r="30" fill="#F3D8DA"/>
+          <circle cx="230" cy="220" r="28" fill="#E2A6AC"/>
+        </g>
+        <g class="bloom bloom-2">
+          <circle cx="335" cy="240" r="54" fill="#A6344B"/>
+          <circle cx="315" cy="225" r="28" fill="#8E2A3E"/>
+          <circle cx="355" cy="230" r="26" fill="#BF5266"/>
+          <circle cx="335" cy="258" r="24" fill="#7E2436"/>
+        </g>
+        <g class="bloom bloom-3">
+          <circle cx="270" cy="310" r="48" fill="#C6A15B"/>
+          <circle cx="252" cy="298" r="24" fill="#B48C45"/>
+          <circle cx="288" cy="300" r="22" fill="#D9BC82"/>
+        </g>
+        <g class="bloom bloom-4">
+          <circle cx="180" cy="290" r="38" fill="#F6ECD9"/>
+          <circle cx="180" cy="290" r="18" fill="#C6A15B"/>
+        </g>
+        <path class="leaf" d="M160 340 C 120 320, 90 280, 100 240 C 140 250, 170 290, 160 340Z" fill="#33502F"/>
+        <path class="leaf" d="M370 330 C 415 315, 445 275, 435 235 C 393 245, 362 285, 370 330Z" fill="#3E5D3A"/>
+        <path class="leaf" d="M245 360 C 235 400, 250 430, 260 400 C 265 385, 260 365, 245 360Z" fill="#2F4B37"/>
+      </svg>
+    </div>
+  </div>
+  <svg class="hero-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 Q 360 0 720 30 T 1440 30 V60 H0 Z" fill="#FAF5EC"/></svg>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Hand-tied same day</span><span class="dot">•</span>
+    <span>Locally sourced stems</span><span class="dot">•</span>
+    <span>Seasonal, never forced</span><span class="dot">•</span>
+    <span>Compostable wrap</span><span class="dot">•</span>
+    <span>Hand-tied same day</span><span class="dot">•</span>
+    <span>Locally sourced stems</span><span class="dot">•</span>
+    <span>Seasonal, never forced</span><span class="dot">•</span>
+    <span>Compostable wrap</span><span class="dot">•</span>
+  </div>
+</div>
+
+<!-- ============ OCCASIONS ============ -->
+<section class="occasions" id="occasions">
+  <div class="section-head">
+    <h2>Shop by occasion</h2>
+    <p>Every arrangement is built to order — pick a moment, we'll pick the stems.</p>
+  </div>
+  <div class="occasion-grid">
+    <button class="occasion-card occasion-card--wide" data-filter="everyday">
+      <svg viewBox="0 0 64 64" class="occasion-icon"><circle cx="32" cy="26" r="14" fill="#C6A15B"/><rect x="28" y="38" width="8" height="18" rx="3" fill="#4B6B4A"/></svg>
+      <span class="occasion-name">Everyday</span>
+      <span class="occasion-desc">Simple, unfussy bunches for a Tuesday</span>
+    </button>
+    <button class="occasion-card" data-filter="wedding">
+      <svg viewBox="0 0 64 64" class="occasion-icon"><circle cx="24" cy="30" r="12" fill="#EFC9CC"/><circle cx="40" cy="30" r="12" fill="#F3D8DA"/><circle cx="32" cy="20" r="12" fill="#E9B7BB"/></svg>
+      <span class="occasion-name">Wedding</span>
+      <span class="occasion-desc">Bridal & event florals</span>
+    </button>
+    <button class="occasion-card" data-filter="sympathy">
+      <svg viewBox="0 0 64 64" class="occasion-icon"><path d="M32 46C20 38 12 30 12 21C12 14 18 10 24 13C28 15 32 20 32 20C32 20 36 15 40 13C46 10 52 14 52 21C52 30 44 38 32 46Z" fill="#F6ECD9" stroke="#C6A15B" stroke-width="2"/></svg>
+      <span class="occasion-name">Sympathy</span>
+      <span class="occasion-desc">Quiet, gentle tributes</span>
+    </button>
+    <button class="occasion-card" data-filter="celebration">
+      <svg viewBox="0 0 64 64" class="occasion-icon"><circle cx="32" cy="32" r="8" fill="#A6344B"/><circle cx="16" cy="20" r="5" fill="#C6A15B"/><circle cx="48" cy="20" r="5" fill="#4B6B4A"/><circle cx="16" cy="46" r="5" fill="#4B6B4A"/><circle cx="48" cy="46" r="5" fill="#C6A15B"/></svg>
+      <span class="occasion-name">Celebration</span>
+      <span class="occasion-desc">Big, bright, a little extra</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ SHOP / PRODUCTS ============ -->
+<section class="shop" id="shop">
+  <div class="section-head">
+    <h2>This week's arrangements</h2>
+    <p>Cut Monday, delivered within days — the lineup changes with the growers' fields.</p>
+  </div>
+
+  <div class="filter-row" id="filterRow">
+    <button class="filter-chip is-active" data-filter="all">All</button>
+    <button class="filter-chip" data-filter="everyday">Everyday</button>
+    <button class="filter-chip" data-filter="wedding">Wedding</button>
+    <button class="filter-chip" data-filter="sympathy">Sympathy</button>
+    <button class="filter-chip" data-filter="celebration">Celebration</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"><!-- injected by script.js --></div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="section-head section-head--light">
+    <h2>How delivery works</h2>
+    <p>Three steps between the field and your door.</p>
+  </div>
+  <ol class="process-list">
+    <li>
+      <span class="process-num">01</span>
+      <h3>Order by 2pm</h3>
+      <p>Choose an arrangement or tell us a budget and let our florists interpret it.</p>
+    </li>
+    <li>
+      <span class="process-num">02</span>
+      <h3>Hand-tied that morning</h3>
+      <p>A single florist cuts, conditions and ties your order start to finish.</p>
+    </li>
+    <li>
+      <span class="process-num">03</span>
+      <h3>Delivered the same day</h3>
+      <p>Local courier for city addresses; tracked post for everywhere else.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ STUDIO / EDITORIAL ============ -->
+<section class="studio" id="studio">
+  <div class="studio-art" aria-hidden="true">
+    <svg viewBox="0 0 480 480" fill="none">
+      <rect width="480" height="480" rx="18" fill="#EFE6D4"/>
+      <circle cx="180" cy="200" r="70" fill="#EFC9CC"/>
+      <circle cx="300" cy="230" r="60" fill="#A6344B"/>
+      <circle cx="240" cy="150" r="50" fill="#C6A15B"/>
+      <path d="M150 300 C 130 360, 140 420, 160 460" stroke="#4B6B4A" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M320 300 C 335 360, 320 420, 300 460" stroke="#3E5D3A" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M230 300 C 225 370, 235 430, 240 460" stroke="#2F4B37" stroke-width="8" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+  <div class="studio-copy">
+    <p class="hero-kicker">From the studio</p>
+    <h2>We buy the flower before we know the order</h2>
+    <p>Every Monday our head florist walks the growers' rows and buys what's actually ready — not what a catalogue says should be in season. The week's collection above is built backwards from that walk, which is why it changes so often. It also means a rose bought this week was likely still in bud on Friday.</p>
+    <a href="#footer" class="btn btn-outline">Read more about our sourcing</a>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials">
+  <div class="section-head">
+    <h2>What people order flowers for</h2>
+  </div>
+  <div class="testimonial-carousel" id="testimonialCarousel">
+    <div class="testimonial-track" id="testimonialTrack">
+      <blockquote class="testimonial">
+        <p>“They arrived open, fragrant, and about a day from full bloom — exactly the timing I asked for.”</p>
+        <cite>Maja P., weekly subscriber</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>“I gave the florist a color and a budget and walked away happier than if I'd chosen the stems myself.”</p>
+        <cite>Dušan R., anniversary order</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>“The sympathy arrangement was quiet in exactly the way the moment needed. No card language, just flowers.”</p>
+        <cite>Ivana M.</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>“Same-day, actually. Ordered at noon for a dinner that evening and it beat me home.”</p>
+        <cite>Filip T.</cite>
+      </blockquote>
+    </div>
+    <div class="testimonial-controls">
+      <button id="testPrev" aria-label="Previous testimonial">←</button>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+      <button id="testNext" aria-label="Next testimonial">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Get first look at what's cut each Monday</h2>
+    <p>One email a week. No offers you didn't ask for.</p>
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="email" required placeholder="you@email.com" aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <p class="newsletter-note" id="newsletterNote" role="status"></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="logo">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+          <path d="M20 6C20 6 24 12 24 17C24 20.3137 22.2091 23 20 23C17.7909 23 16 20.3137 16 17C16 12 20 6 20 6Z" fill="currentColor"/>
+          <path d="M20 34C20 34 16 28 16 23C16 19.6863 17.7909 17 20 17C22.2091 17 24 19.6863 24 23C24 28 20 34 20 34Z" fill="currentColor" opacity="0.55"/>
+          <path d="M6 20C6 20 12 16 17 16C20.3137 16 23 17.7909 23 20C23 22.2091 20.3137 24 17 24C12 24 6 20 6 20Z" fill="currentColor" opacity="0.75"/>
+          <path d="M34 20C34 20 28 24 23 24C19.6863 24 17 22.2091 17 20C17 17.7909 19.6863 16 23 16C28 16 34 20 34 20Z" fill="currentColor" opacity="0.4"/>
+        </svg>
+        <span class="logo-word">Bloomhaus</span>
+      </a>
+      <p>Cut fresh, tied by hand, delivered the same day.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop">Everyday</a>
+      <a href="#shop">Wedding</a>
+      <a href="#shop">Sympathy</a>
+      <a href="#shop">Celebration</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#studio">Our sourcing</a>
+      <a href="#process">Delivery</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <a href="#">Track an order</a>
+      <a href="#">Care guide</a>
+      <a href="#">Contact us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Bloomhaus Flower Studio. All rights reserved.</p>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑ Top</button>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h3>Your cart</h3>
+    <button id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Subtotal</span>
+      <span id="cartTotal">$0</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
